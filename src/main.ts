@@ -1,4 +1,3 @@
-import { Player } from "./player";
 import { Field } from "./field";
 import { Team } from "./team";
 import { Clock } from "./clock";
@@ -16,11 +15,17 @@ export class init {
     }
 
     kickoff(){
+        this.teams[this.flipCoin()].formation.startWithBall();
         this.clock.start(this.play);
     }
 
     play(){
-        //
+        // This is where all the action happens, this get executed every time step.
+        this.teams.forEach(team => team.play());
+    }
+
+    flipCoin(): number {
+        return Math.round(Math.random());
     }
 
 }

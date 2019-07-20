@@ -6,7 +6,7 @@ export class Clock{
 
     start(play: ()=>void){
         this.time = 0;
-        // Execute a play iteration every second
-        setInterval(play, 1000);
+        // Execute a play iteration every 1/10th second
+        setInterval(play, 100);
     }
 }
