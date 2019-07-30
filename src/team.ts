@@ -1,28 +1,7 @@
-import { Goalie } from "./positions/goalie";
-
 import { Formation } from "./formation";
+import { Player } from "./player";
 
-import { Point } from "./point";
-import { Side } from "./side";
-
-export class Team{
-
-    goalie: Goalie;
+export class Team {
     formation: Formation;
-    midpoint: Point;
-    side: Side;
-
-    play(){
-
-    }
-
-    hasBall(){
-        this.formation.players.forEach(player => {
-            if(player.hasBall){
-                return true;
-            }
-        });
-        return false;
-    }
-    
+    players: Player[];
 }

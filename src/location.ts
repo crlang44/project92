@@ -1,4 +1,4 @@
-export class Point{
+export class Location {
     x: number;
     y: number;
 }

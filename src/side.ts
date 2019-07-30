@@ -1,1 +1,4 @@
-export type Side = "Left" | "Right";
+export enum Side {
+    Left,
+    Right
+}

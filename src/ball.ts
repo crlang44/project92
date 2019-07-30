@@ -1,5 +1,7 @@
-import { Point } from "./point";
+import { Location } from "./location";
+import { Velocity } from "./velocity";
 
 export class Ball{
-    location: Point;
+    location: Location;
+    velocity: Velocity;
 }
