@@ -1,7 +1,12 @@
-import { Location } from "./location";
-import { Velocity } from "./velocity";
+import { Location } from "./Location";
+import { Velocity } from "./Velocity";
+import { Drawable } from "./Drawable";
 
-export class Ball{
+export class Ball implements Drawable{
     location: Location;
     velocity: Velocity;
+
+    draw(){
+        
+    }
 }

@@ -1,7 +1,7 @@
-import { Field } from "./field";
-import { Team } from "./team";
-import { Clock } from "./clock";
-import { Side } from "./side";
+import { Field } from "./Field";
+import { Team } from "./Team";
+import { Clock } from "./Clock";
+import { Side } from "./Side";
 
 export class init {
     field: Field;
@@ -10,7 +10,7 @@ export class init {
 
     constructor(){
         this.field = new Field();
-        this.teams = [new Team(Side.Home), new Team(Side.Away)];
+        this.teams = [new Team(Side.Left), new Team(Side.Right)];
         this.clock = new Clock();
         this.kickoff();
     }

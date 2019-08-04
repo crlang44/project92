@@ -1,5 +1,5 @@
-import { Location } from "./location";
-import { Position } from "./position";
+import { Location } from "./Location";
+import { Position } from "./Position";
 
 export class Formation {
     name: string;
