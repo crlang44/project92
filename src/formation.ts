@@ -1,4 +1,4 @@
-import { Location } from "./Location";
+import { Location } from "./spacial/Location";
 import { Position } from "./Position";
 
 export class Formation {

@@ -1,10 +1,10 @@
-import { Location } from "./Location";
+import { Location } from "./spacial/Location";
 import { Team } from "./Team";
 import { Position } from "./Position";
-import { Velocity } from "./Velocity";
-import { Strategy } from "./Strategy";
-import { UserStrategy } from "./UserStrategy";
-import { AIStrategy } from "./AIStrategy";
+import { Velocity } from "./spacial/Velocity";
+import { MoveStrategy } from "./strategy/Strategy";
+import { UserStrategy } from "./strategy/UserStrategy";
+import { AIStrategy } from "./strategy/AIStrategy";
 import { Drawable } from "./Drawable";
 
 export class Player implements Drawable{
@@ -12,7 +12,7 @@ export class Player implements Drawable{
     location: Location;
     position: Position;
     velocity: Velocity;
-    strategy: Strategy;
+    strategy: MoveStrategy;
 
     hasBall: boolean;
 
@@ -33,7 +33,7 @@ export class Player implements Drawable{
     }
 
     draw(){
-        
+
     }
 
 }

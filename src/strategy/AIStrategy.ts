@@ -1,8 +1,8 @@
-import { Strategy } from "./strategy";
-import { Player } from "./player";
-import { Velocity } from "./velocity";
+import { MoveStrategy } from "./Strategy";
+import { Player } from "../player";
+import { Velocity } from "../spacial/Velocity";
 
-export class AIStrategy implements Strategy{
+export class AIStrategy implements MoveStrategy{
     player: Player;
 
     constructor(player: Player){

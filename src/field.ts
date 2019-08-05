@@ -1,5 +1,5 @@
 import { Ball } from "./Ball";
-import { Dimensions } from "./Dimensions";
+import { Dimensions } from "./spacial/Dimensions";
 import { Goal } from "./Goal";
 import { Drawable } from "./Drawable";
 
