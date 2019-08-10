@@ -1,16 +1,16 @@
 import { Location } from "./spacial/Location";
 import { Team } from "./Team";
-import { Position } from "./Position";
 import { Velocity } from "./spacial/Velocity";
 import { MoveStrategy } from "./strategy/Strategy";
 import { UserStrategy } from "./strategy/UserStrategy";
 import { AIStrategy } from "./strategy/AIStrategy";
 import { Drawable } from "./Drawable";
+import { Positions } from "./Positions";
 
 export class Player implements Drawable{
     team: Team;
-    location: Location;
-    position: Position;
+    locationRelativeToPosition: Location;
+    position: Positions;
     velocity: Velocity;
     strategy: MoveStrategy;
 

@@ -1,7 +1,7 @@
 import { Location } from './spacial/Location';
+import { Positions } from './Positions';
 
 export class Position {
-    name: string;
-    index: number;
-    location: Location;
+    position: Positions;
+    locationRelativeToFormation: Location;
 }
