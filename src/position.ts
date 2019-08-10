@@ -1,7 +1,12 @@
 import { Location } from './spacial/Location';
-import { Positions } from './Positions';
+import { PositionTypes } from './PositionTypes';
 
 export class Position {
-    position: Positions;
+    type: PositionTypes;
     locationRelativeToFormation: Location;
+
+    constructor(type: PositionTypes, location: Location){
+        this.type = type;
+        this.locationRelativeToFormation = location;
+    }
 }

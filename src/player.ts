@@ -5,19 +5,20 @@ import { MoveStrategy } from "./strategy/Strategy";
 import { UserStrategy } from "./strategy/UserStrategy";
 import { AIStrategy } from "./strategy/AIStrategy";
 import { Drawable } from "./Drawable";
-import { Positions } from "./Positions";
+import { PositionTypes } from "./PositionTypes";
 
 export class Player implements Drawable{
     team: Team;
     locationRelativeToPosition: Location;
-    position: Positions;
+    position: PositionTypes;
     velocity: Velocity;
     strategy: MoveStrategy;
 
     hasBall: boolean;
 
-    constructor() {
-
+    constructor(position: PositionTypes) {
+        this.position = position;
+        this.strategy = new AIStrategy(this);
     }
 
     getNextMove(){

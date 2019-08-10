@@ -1,4 +1,4 @@
-export enum Positions{
+export enum PositionTypes{
     Goalkeeper = 1,
     Right_Fullback,
     Left_Fullback,

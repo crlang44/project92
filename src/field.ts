@@ -8,6 +8,10 @@ export class Field implements Drawable{
     dimensions: Dimensions;
     ball: Ball;
 
+    constructor(){
+        this.dimensions = new Dimensions(120, 80);
+    }
+
     draw(){
         
     }
