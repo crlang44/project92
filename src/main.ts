@@ -17,8 +17,6 @@ export class init {
         this.field = new Field();
         this.clock = new Clock();
         this.teams.push(this.createTeam(Side.Left));
-        // this.teams.push(this.createTeam(Side.Right));
-        this.kickoff();
     }
 
     kickoff(): void {
@@ -27,7 +25,6 @@ export class init {
 
     play(): void {
         // This is where all the action happens, this get executed every time step.
-        // this.teams.forEach(team => team.play());
     }
 
     createTeam(side: Side): Team {
