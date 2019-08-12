@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var fancy_log = require('fancy-log');
 var buffer = require('vinyl-buffer');
+var connect = require('gulp-connect');
 var paths = {
     pages: ['src/*.html']
 };
@@ -50,6 +51,24 @@ gulp.task('package', gulp.series(gulp.parallel('copy-html'), function () {
     .pipe(gulp.dest('dist'));
 }));
 
-gulp.task('default', gulp.series(gulp.parallel('copy-html'), bundle));
+/*
+Web server to test app
+*/
+gulp.task('webserver', function() {
+    connect.server({
+        livereload: true,
+        root: ['.', 'dist']
+    });
+});
+/*
+Automatic Live Reload
+*/
+gulp.task('livereload', function() {
+    gulp.src(['dist/*'])
+    .pipe(watch(['dist/styles/*']))
+    .pipe(connect.reload());
+});
+
+gulp.task('default', gulp.series(gulp.parallel('copy-html'), bundle, 'webserver'));
 watchedBrowserify.on('update', bundle);
 watchedBrowserify.on('log', fancy_log);
