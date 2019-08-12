@@ -28,16 +28,22 @@ export class init {
 
     play(): void {
         // This is where all the action happens, this get executed every time step.
-        this.teams.forEach(team => team.play());
     }
 
     createTeam(side: Side): Team {
         let team = new Team(side);
         team.players = this.createPlayers();
         team.formation = this.createFormation(side);
+
+        let unfilledPositions = [];
         for (let currentPosition of team.formation.positions) {
-            let playerWithCurrentPosition = team.players.filter(player => player.position === currentPosition.type)[0];
-            playerWithCurrentPosition.locationRelativeToPosition = new Location(0, 0);
+            let playersMatchingCurrentPosition = team.players.filter(player => player.position === currentPosition.type);
+            if(playersMatchingCurrentPosition.length > 0){
+                currentPosition.player = playersMatchingCurrentPosition[0];
+                currentPosition.player.locationRelativeToPosition = new Location(0,0);
+            }else{
+                unfilledPositions.push(currentPosition);
+            }
         }
         return team;
     }
