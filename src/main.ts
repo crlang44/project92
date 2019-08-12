@@ -10,13 +10,12 @@ import { Position } from "./Position";
 
 export class init {
     field: Field;
-    teams: Team[];
+    teams: Team[] = [];
     clock: Clock;
 
     constructor() {
         this.field = new Field();
         this.clock = new Clock();
-
         this.teams.push(this.createTeam(Side.Left));
         // this.teams.push(this.createTeam(Side.Right));
         this.kickoff();
@@ -28,7 +27,7 @@ export class init {
 
     play(): void {
         // This is where all the action happens, this get executed every time step.
-        this.teams.forEach(team => team.play());
+        // this.teams.forEach(team => team.play());
     }
 
     createTeam(side: Side): Team {
@@ -76,4 +75,6 @@ export class init {
     }
 
 }
+
+new init();
 

@@ -9,7 +9,11 @@
             "request": "launch",
             "name": "Launch Program",
             "url": "file:///C:/Users/Chris/Documents/GitHub/browserball/dist/index.html",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "*": "${webRoot}/*"
+              }
         }
     ]
 }
