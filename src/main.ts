@@ -10,16 +10,13 @@ import { Position } from "./Position";
 
 export class init {
     field: Field;
-    teams: Team[];
+    teams: Team[] = [];
     clock: Clock;
 
     constructor() {
         this.field = new Field();
         this.clock = new Clock();
-
         this.teams.push(this.createTeam(Side.Left));
-        // this.teams.push(this.createTeam(Side.Right));
-        this.kickoff();
     }
 
     kickoff(): void {
@@ -82,4 +79,6 @@ export class init {
     }
 
 }
+
+new init();
 

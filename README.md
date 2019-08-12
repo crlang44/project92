@@ -1,6 +1,15 @@
-Compile application with `gulp`
+How to run for development purposes:
+1. Install Gulp `npm install -g gulp-cli`
+2. Run `npm install`
+3. Run `gulp`
+4. Install the "Debugger for Chrome" Extension in VSCode.
+5. Debug -> Start Debugging (F5) in VSCode. This should open a browser and load the index page.
 
-View dist/index.html in the browser.
+How to package for distribution:
+1. Install Gulp `npm install -g gulp-cli`
+2. Run `npm install`
+3. Run `gulp package`
+4. Output is the dist folder
 
 Notes to developer:
 -All distances are in meters
