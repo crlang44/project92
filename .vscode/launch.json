@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Program",
-            "url": "file:///C:/Users/Chris/Documents/GitHub/browserball/dist/index.html",
+            "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {

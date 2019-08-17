@@ -17,14 +17,19 @@ export class init {
         this.field = new Field();
         this.clock = new Clock();
         this.teams.push(this.createTeam(Side.Left));
+
+        setTimeout(this.field.draw, 0);
+
+        this.kickoff();
     }
 
     kickoff(): void {
-        this.clock.start(this.play);
+        this.clock.start(this.play.bind(this));
     }
 
     play(): void {
         // This is where all the action happens, this get executed every time step.
+        
     }
 
     createTeam(side: Side): Team {
