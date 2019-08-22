@@ -18,7 +18,7 @@ export class Player implements Drawable{
 
     constructor(position: PositionTypes) {
         this.position = position;
-        this.strategy = new AIStrategy(this);
+        this.strategy = new UserStrategy(this);
     }
 
     getNextMove(){
