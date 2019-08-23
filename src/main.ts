@@ -29,7 +29,11 @@ export class init {
 
     play(): void {
         // This is where all the action happens, this get executed every time step.
-        
+        this.teams.forEach(team => {
+            team.formation.positions.forEach(position => {
+                position.player.draw();
+            })
+        })
     }
 
     createTeam(side: Side): Team {
@@ -52,34 +56,34 @@ export class init {
 
     createFormation(side: Side): Formation {
         let formation = new Formation("4_4_2");
-        formation.positions.push(new Position(PositionTypes.Goalkeeper, new Location(-30, 0)));
-        formation.positions.push(new Position(PositionTypes.Right_Fullback, new Location(-10, -10)));
-        formation.positions.push(new Position(PositionTypes.Left_Fullback, new Location(-10, 10)));
-        formation.positions.push(new Position(PositionTypes.Center_Back_1, new Location(-10, -5)));
-        formation.positions.push(new Position(PositionTypes.Center_Back_2, new Location(-10, 5)));
-        formation.positions.push(new Position(PositionTypes.Defending_Mid, new Location(0, -5)));
-        formation.positions.push(new Position(PositionTypes.Right_Mid, new Location(10, -10)));
-        formation.positions.push(new Position(PositionTypes.Central_Mid, new Location(0, -10)));
+        // formation.positions.push(new Position(PositionTypes.Goalkeeper, new Location(-30, 0)));
+        // formation.positions.push(new Position(PositionTypes.Right_Fullback, new Location(-10, -10)));
+        // formation.positions.push(new Position(PositionTypes.Left_Fullback, new Location(-10, 10)));
+        // formation.positions.push(new Position(PositionTypes.Center_Back_1, new Location(-10, -5)));
+        // formation.positions.push(new Position(PositionTypes.Center_Back_2, new Location(-10, 5)));
+        // formation.positions.push(new Position(PositionTypes.Defending_Mid, new Location(0, -5)));
+        // formation.positions.push(new Position(PositionTypes.Right_Mid, new Location(10, -10)));
+        // formation.positions.push(new Position(PositionTypes.Central_Mid, new Location(0, -10)));
         formation.positions.push(new Position(PositionTypes.Striker, new Location(10, 10)));
-        formation.positions.push(new Position(PositionTypes.Attacking_Mid, new Location(0, 5)));
-        formation.positions.push(new Position(PositionTypes.Left_Mid, new Location(0, 10)));
+        // formation.positions.push(new Position(PositionTypes.Attacking_Mid, new Location(0, 5)));
+        // formation.positions.push(new Position(PositionTypes.Left_Mid, new Location(0, 10)));
 
         return formation;
     }
 
     createPlayers(): Player[] {
         let players: Player[] = [];
-        players.push(new Player(PositionTypes.Goalkeeper));
-        players.push(new Player(PositionTypes.Right_Fullback));
-        players.push(new Player(PositionTypes.Left_Fullback));
-        players.push(new Player(PositionTypes.Center_Back_1));
-        players.push(new Player(PositionTypes.Center_Back_2));
-        players.push(new Player(PositionTypes.Defending_Mid));
-        players.push(new Player(PositionTypes.Right_Mid));
-        players.push(new Player(PositionTypes.Central_Mid));
+        // players.push(new Player(PositionTypes.Goalkeeper));
+        // players.push(new Player(PositionTypes.Right_Fullback));
+        // players.push(new Player(PositionTypes.Left_Fullback));
+        // players.push(new Player(PositionTypes.Center_Back_1));
+        // players.push(new Player(PositionTypes.Center_Back_2));
+        // players.push(new Player(PositionTypes.Defending_Mid));
+        // players.push(new Player(PositionTypes.Right_Mid));
+        // players.push(new Player(PositionTypes.Central_Mid));
         players.push(new Player(PositionTypes.Striker));
-        players.push(new Player(PositionTypes.Attacking_Mid));
-        players.push(new Player(PositionTypes.Left_Mid));
+        // players.push(new Player(PositionTypes.Attacking_Mid));
+        // players.push(new Player(PositionTypes.Left_Mid));
         return players;
     }
 

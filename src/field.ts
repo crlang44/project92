@@ -17,12 +17,12 @@ export class Field implements Drawable{
         let css =
         `<style>
         .field{
-            height: 100%;
             background: url(https://i0.wp.com/avantisocceracademy.com/wp-content/uploads/2018/05/soccer-field-wallpaper-high-resolution-38744812.jpg?ssl=1) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            height: 100%;
         }
         </style>`
 
